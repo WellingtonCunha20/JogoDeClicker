@@ -3,8 +3,46 @@
     padding: 0;
 }
 
-.fundoimg {
-    width: 100%;
-    height: 100%;
-    width: auto;
+body {
+    position: relative;
+    background-image: url(/Imagens/nether-portal.gif);
+}
+
+.bterra {
+    position: absolute;
+    top: 280px;
+    left: 300px;
+}
+
+.iterra {
+    width: 300px;
+}
+
+.tabela {
+    display: block;
+    float: right;
+    margin: 50px;
+}
+
+.imgtbl {
+    width: 85px;
+}
+
+.itmtbl {
+    display: block;
+    background-color: #ffff;
+    width: 350px;
+    margin: 20px;
+    display: flex;
+}
+
+.textotbl {
+    font-size: 20px;
+    margin-left: 80px;
+    margin-top: 20px;
+    
+}
+
+.textotbl h2 {
+    text-align: center;
 }
