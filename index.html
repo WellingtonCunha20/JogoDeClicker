@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clicker Game</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/java.js">
 </head>
 <body>
     <div>
@@ -59,7 +60,7 @@
                 updateScore();
                 updateUpgrades();
             } else {
-                alert("Not enough score to buy the upgrade!");
+                alert("Pontuação insuficiente para comprar a atualização!");
             }
         }
 
@@ -72,8 +73,8 @@
         }
 
         function checkWinCondition() {
-            if (score >= 500) {
-                alert("Parabéns! Você acumulou 500 pontos. Você venceu!");
+            if (score >= 1000) {
+                alert("Parabéns! Você acumulou 1000 pontos. Você venceu!");
             }
         }
     </script>
