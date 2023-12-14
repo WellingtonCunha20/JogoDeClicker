@@ -30,14 +30,20 @@ body {
 
 .itmtbl {
     display: block;
-    background-color: #ffff;
+    background: #A8A8A8;
     width: 350px;
     margin: 20px;
     display: flex;
+    transition: 0.6s;
+    border: 1px solid black;
+}
+
+.itmtbl:hover {
+    background: #E6E8FA;
 }
 
 .textotbl {
-    font-size: 20px;
+    font-size: 17px;
     margin-left: 80px;
     margin-top: 20px;
     
