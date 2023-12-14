@@ -12,12 +12,17 @@ body {
     position: absolute;
     top: 280px;
     left: 300px;
+    background: transparent;
+    border: transparent;
 }
 
 .iterra {
     width: 300px;
 }
 
+#contador {
+    font-size: 50px;
+}
 .tabela {
     display: block;
     float: right;
