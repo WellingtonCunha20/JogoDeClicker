@@ -10,30 +10,32 @@
 <body>
     <div>
         <button id="clicker" class="bterra">
-            <img class="iterra" src="/Imagens/terra.png" alt="">
+            <img class="iterra" src="/Imagens/porco-removebg-preview.png" alt="">
         </button>
     </div>
 
     <p id="contador">$0</p>
     <p id="upgrade-info">Upgrades: 0</p>
+    <p id="forca">Força do click: 1</p>
 
     <div class="tabela">
+        <p class="up">Upgrades</p>
         <button id="upgrade1" class="itmtbl" onclick="buyUpgrade(10, 1)">
-            <img class="imgtbl" src="/Imagens/pedra.png" alt="">
+            <img class="imgtbl" src="/Imagens/Stone_Sword_JE2_BE2.webp" alt="">
             <div class="textotbl">
                 <p>Upgrade 1</p>
                 <h2>10</h2>
             </div>
         </button>
         <button id="upgrade2" class="itmtbl" onclick="buyUpgrade(50, 8)">
-            <img class="imgtbl" src="/Imagens/ouro.png" alt="">
+            <img class="imgtbl" src="/Imagens/Enchanted_Diamond_Sword.webp" alt="">
             <div class="textotbl">
                 <p>Upgrade 2</p>
                 <h2>50</h2>
             </div>
         </button>
         <button id="upgrade3" class="itmtbl" onclick="buyUpgrade(100, 32)">
-            <img class="imgtbl" src="/Imagens/diamante.png" alt="">
+            <img class="imgtbl" src="/Imagens/espada ned.webp" alt="">
             <div class="textotbl">
                 <p>Upgrade 3</p>
                 <h2>100</h2>
@@ -45,6 +47,7 @@
         let score = 0;
         let clickValue = 1;
         let upgrades = 0;
+        let forca = 1
 
         document.getElementById("clicker").addEventListener("click", function() {
             score += clickValue;
@@ -72,9 +75,13 @@
             document.getElementById("upgrade-info").innerText = "Upgrades: " + upgrades;
         }
 
+        function updateUpgrades() {
+            document.getElementById("forca").innerText = "Força do click: " + clickValue;
+        }
+
         function checkWinCondition() {
-            if (score >= 1000) {
-                alert("Parabéns! Você acumulou 1000 pontos. Você venceu!");
+            if (score >= 5000) {
+                alert("Parabéns! Você acumulou 5000 pontos. Você venceu!");
             }
         }
     </script>
