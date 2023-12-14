@@ -8,28 +8,30 @@
 </head>
 <body>
     <div>
-        <button class="bterra">
-        <img class="iterra" src="/Imagens/terra.png" alt="">
+        <button id="clicker" class="bterra">
+            <img class="iterra" src="/Imagens/terra.png" alt="">
         </button>
     </div>
-    
+
     <p id="contador">$0</p>
+    <p id="upgrade-info">Upgrades: 0</p>
+
     <div class="tabela">
-        <button class="itmtbl">
+        <button id="upgrade1" class="itmtbl" onclick="buyUpgrade(10, 1)">
             <img class="imgtbl" src="/Imagens/pedra.png" alt="">
             <div class="textotbl">
-            <p>Upgrade 1</p>
-            <h2>10</h2>
+                <p>Upgrade 1</p>
+                <h2>10</h2>
             </div>
         </button>
-        <button class="itmtbl">
+        <button id="upgrade2" class="itmtbl" onclick="buyUpgrade(50, 8)">
             <img class="imgtbl" src="/Imagens/ouro.png" alt="">
             <div class="textotbl">
                 <p>Upgrade 2</p>
                 <h2>50</h2>
             </div>
         </button>
-        <button class="itmtbl">
+        <button id="upgrade3" class="itmtbl" onclick="buyUpgrade(100, 32)">
             <img class="imgtbl" src="/Imagens/diamante.png" alt="">
             <div class="textotbl">
                 <p>Upgrade 3</p>
@@ -37,5 +39,43 @@
             </div>
         </button>
     </div>
+
+    <script>
+        let score = 0;
+        let clickValue = 1;
+        let upgrades = 0;
+
+        document.getElementById("clicker").addEventListener("click", function() {
+            score += clickValue;
+            updateScore();
+            checkWinCondition();
+        });
+
+        function buyUpgrade(cost, valueIncrease) {
+            if (score >= cost) {
+                score -= cost;
+                clickValue += valueIncrease;
+                upgrades++;
+                updateScore();
+                updateUpgrades();
+            } else {
+                alert("Not enough score to buy the upgrade!");
+            }
+        }
+
+        function updateScore() {
+            document.getElementById("contador").innerText = "$" + score;
+        }
+
+        function updateUpgrades() {
+            document.getElementById("upgrade-info").innerText = "Upgrades: " + upgrades;
+        }
+
+        function checkWinCondition() {
+            if (score >= 500) {
+                alert("Parabéns! Você acumulou 500 pontos. Você venceu!");
+            }
+        }
+    </script>
 </body>
 </html>
